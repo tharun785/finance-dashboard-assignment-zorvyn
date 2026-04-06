@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# 💰 Finance Dashboard Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive full-stack finance management system with role-based access control (RBAC), JWT authentication, and real-time analytics dashboard.
 
-## Available Scripts
+## 📋 Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Architecture](#architecture)
+- [Prerequisites](#prerequisites)
+- [Installation Guide](#installation-guide)
+- [Configuration](#configuration)
+- [Running the Application](#running-the-application)
+- [API Documentation](#api-documentation)
+- [Database Schema](#database-schema)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
 
-In the project directory, you can run:
+## 🎯 Overview
 
-### `npm start`
+The Finance Dashboard Application is a secure, scalable web application that helps users manage their financial transactions, track income and expenses, and gain insights through interactive dashboards. The system implements role-based access control with three distinct user roles: Admin, Analyst, and Viewer.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Key Highlights
+- 🔐 **Secure Authentication**: JWT-based authentication with Spring Security
+- 👥 **Role-Based Access**: Granular permissions for Admin, Analyst, and Viewer roles
+- 📊 **Real-time Dashboard**: Interactive charts and analytics for financial data
+- 💱 **Transaction Management**: Complete CRUD operations for financial records
+- 📈 **Insights & Analytics**: Category-wise expense breakdown and income tracking
+- 🎨 **Responsive UI**: Modern, responsive React frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+### Authentication & Authorization
+- User registration and login with JWT tokens
+- Role-based access control (Admin, Analyst, Viewer)
+- Token-based API security
+- Password encryption using BCrypt
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Dashboard
+- Real-time financial summary (Total Income, Expenses, Net Balance)
+- Category-wise expense breakdown with visual charts
+- Recent transaction history
+- Quick insights and statistics
 
-### `npm run build`
+### Financial Records Management
+- Create, read, update, and delete financial records
+- Filter records by type, category, and date range
+- Track income and expenses with categories
+- View transaction history
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### User Management (Admin only)
+- View all registered users
+- Create new users with specific roles
+- Activate/deactivate user accounts
+- Update user roles
+- Delete user accounts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Technology Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| Java | 21 | Core programming language |
+| Spring Boot | 3.1.5 | Application framework |
+| Spring Security | 3.1.5 | Authentication & Authorization |
+| Spring Data JPA | 3.1.5 | Database ORM |
+| PostgreSQL | 15+ | Relational database |
+| JWT | 0.11.5 | Token-based authentication |
+| Maven | 3.8+ | Dependency management |
+| Hibernate | 6.2+ | ORM implementation |
+| Lombok | 1.18.30 | Boilerplate code reduction |
 
-### `npm run eject`
+### Frontend
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| React | 18.2.0 | UI framework |
+| React Router DOM | 6.20.1 | Routing |
+| Axios | 1.6.2 | HTTP client |
+| CSS3 | - | Styling |
+| Recharts | 2.10.3 | Charts and graphs |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Development Tools
+- IntelliJ IDEA / VS Code
+- Postman for API testing
+- Git for version control
+- Maven for build management
+- npm for frontend dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🏗 Architecture
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### System Architecture
