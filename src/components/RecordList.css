@@ -1,0 +1,71 @@
+.record-list {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filters select,
+.filters input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.records-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #f7f7f7;
+  font-weight: 600;
+  color: #333;
+}
+
+td.income {
+  color: #10b981;
+  font-weight: bold;
+}
+
+td.expense {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: auto;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+}

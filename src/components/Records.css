@@ -1,0 +1,284 @@
+.records-page {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.records-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.records-header h1 {
+  margin: 0;
+  color: #333;
+}
+
+.add-record-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: auto;
+}
+
+.add-record-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+/* Summary Cards */
+.records-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card span {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.summary-card strong {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.summary-card.income strong {
+  color: #10b981;
+}
+
+.summary-card.expense strong {
+  color: #ef4444;
+}
+
+.summary-card.balance strong {
+  color: #667eea;
+}
+
+.summary-card.count strong {
+  color: #f59e0b;
+}
+
+/* Filters */
+.filters-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filters-section h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.filters-grid select,
+.filters-grid input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.clear-filters-btn {
+  background: #6b7280;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: auto;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-btn {
+  background: #10b981;
+  color: white;
+  width: auto;
+  padding: 10px 20px;
+}
+
+.cancel-btn {
+  background: #6b7280;
+  color: white;
+  width: auto;
+  padding: 10px 20px;
+}
+
+/* Records Table */
+.records-table-container {
+  background: white;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.records-table th,
+.records-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.records-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.type-badge.income {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.type-badge.expense {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.amount.income {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.amount.expense {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  width: auto;
+}
+
+.edit-btn {
+  background: #667eea;
+  color: white;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .records-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .records-table th,
+  .records-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
