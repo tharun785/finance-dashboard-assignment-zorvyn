@@ -92,3 +92,5 @@ The Finance Dashboard Application is a secure, scalable web application that hel
 ## 🏗 Architecture
 
 ### System Architecture
+
+
